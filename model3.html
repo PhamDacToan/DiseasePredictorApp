@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model 3: Disease C Prediction</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="model1.html">Model 1</a></li>
+                    <li><a href="model2.html">Model 2</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="card">
+                <h2>Model 3: Disease C Prediction</h2>
+                <form action="/predict" method="POST" enctype="multipart/form-data">
+                    <label for="imageUpload3">Upload Medical Image</label>
+                    <input type="file" id="imageUpload3" name="image" accept="image/*" required>
+                    <button type="submit">Predict</button>
+                </form>
+                <div id="predictionResult3">
+                    <h3>Prediction Result</h3>
+                    <p><strong>Status:</strong> [Disease Status]</p>
+                    <p><strong>Recommendation:</strong> [Health Advice]</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>

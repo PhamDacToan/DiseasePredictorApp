@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Image Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>Medical Image Prediction</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('model1') }}">Lung Disease Predictionn</a></li>
+                <li><a href="{{ url_for('model2') }}">Brain Cancer Prediction</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container" style="text-align: center">
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Medical Prediction. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

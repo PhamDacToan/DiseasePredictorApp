@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="page-container">
+    <div class="form-container">
+        <h2>Chest X_ray Prediction</h2>
+        <form action="{{ url_for('model1') }}" method="POST" enctype="multipart/form-data">
+            <label for="imageUpload1">Lung Disease Predictionn</label>
+            <input type="file" id="imageUpload1" name="image" accept="image/*" required>
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if filename %}
+            <div class="result">
+                <h3>Prediction Result</h3>
+                <p> <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Uploaded Image" style="max-width: 100%; max-height: 300px;"></p>
+                <p><strong>Status:</strong> {{ prediction }}</p>
+                <p><strong>Recommendation:</strong> {{ advice }}</p>
+            </div>
+        {% endif %}
+{% endblock %}
